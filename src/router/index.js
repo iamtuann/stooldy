@@ -7,9 +7,25 @@ const routes = [
     name: "Home",
     component: () => import("../views/Home.vue"),
     meta: {
-      layout: DefaultLayout
+      layout: DefaultLayout,
     }
   },
+  {
+    path: "/atvbmtt",
+    name: "ATVBMTT",
+    meta: {displayName: "An toàn và bảo mật thông tin"},
+    children: [
+      {
+        path: "gcd",
+        name: "Gcd",
+        component: () => import("../views/atvbmtt/Gcd.vue"),
+        meta: { 
+          layout: DefaultLayout,
+          displayName: "Tìm UCLN thuật toán Euclidean"
+        },
+      }
+    ]
+  }
 ]
 
 const router = createRouter({

@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <component :is="$route.meta.layout || div"></component>
+  <v-app>
+    <component :is="$route.meta.layout || 'div'"></component>
+  </v-app>
 </template>
 
 <style scoped>
