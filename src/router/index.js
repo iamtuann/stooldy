@@ -23,6 +23,15 @@ const routes = [
           layout: DefaultLayout,
           displayName: "Tìm UCLN thuật toán Euclidean"
         },
+      },
+      {
+        path: "power-modulo",
+        name: "Power-modulo",
+        component: () => import("../views/atvbmtt/Modulo.vue"),
+        meta: { 
+          layout: DefaultLayout,
+          displayName: "Tính mod với số mũ"
+        },
       }
     ]
   }
