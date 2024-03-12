@@ -55,7 +55,7 @@ async function handleSolve() {
   if (valid) {
     result.value = 0;
     listStep.value = [];
-    if (number1.value > number2.value) {
+    if (Number(number1.value) > Number(number2.value)) {
       euclidean(number1.value, number2.value);
     } else {
       euclidean(number2.value, number1.value)
