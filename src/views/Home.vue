@@ -17,7 +17,6 @@
 import router from '../router';
 import { ref } from "vue";
 const routes = router.options.routes;
-console.log(routes);
 </script>
 
 <style lang="scss" scoped>
