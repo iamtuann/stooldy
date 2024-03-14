@@ -27,7 +27,7 @@ const routes = [
       {
         path: "power-modulo",
         name: "Power-modulo",
-        component: () => import("../views/atvbmtt/Modulo.vue"),
+        component: () => import("../views/atvbmtt/Modulo2.vue"),
         meta: { 
           layout: DefaultLayout,
           displayName: "Tính mod với số mũ"
