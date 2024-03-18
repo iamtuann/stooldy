@@ -32,6 +32,15 @@ const routes = [
           layout: DefaultLayout,
           displayName: "Tính mod với số mũ"
         },
+      },
+      {
+        path: "modular-inverse",
+        name: "ModularInverse",
+        component: () => import("../views/atvbmtt/ModularInverse.vue"),
+        meta: { 
+          layout: DefaultLayout,
+          displayName: "Tìm phần tử nghịch đảo"
+        },
       }
     ]
   }

@@ -5,7 +5,7 @@
         <RouterLink class="logo" :to="{name: 'Home'}">
           Stooldy
         </RouterLink>
-        <v-space></v-space>
+        <v-spacer></v-spacer>
         <a class="icon-link" href="https://github.com/iamtuann/stooldy" target="_blank">
           <span class="mdi mdi-github"></span>
         </a>
