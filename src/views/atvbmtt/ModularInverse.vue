@@ -19,6 +19,10 @@
     </div>
     <v-btn color="primary" @click="handleSolve" class="mt-2">Giải</v-btn>
 
+    <div class="mt-4" v-if="gcd && gcd != 1">
+      GCD({{ r0 }}, {{ r1 }}) != 1
+    </div>
+
     <div class="mt-4" v-if="result != null">
       <ul>
         <template v-for="(step, i) in listStep" :key="i">
@@ -87,13 +91,19 @@ const inputRules = [
 
 function handleSolve() {
   gcd.value = euclidean(r0Model.value, r1Model.value);
+  r0 = r0Model.value;
+  r1 = r1Model.value;
+  listStep.value = [];
+  result.value = null;
   if (gcd.value != 1) {
     return;
   } else {
-    r0 = r0Model.value;
-    r1 = r1Model.value;
-    listStep.value = [];
-    result.value = null;
+    ri=null;
+    rip1=null;
+    rip2=null;
+    si=null;
+    ti=null;
+    qip1=null;
     step=0;
     extendedEuclid();
   }
@@ -139,7 +149,7 @@ function extendedEuclid() {
       })
     }
   }
-  result.value = listStep.value[step].ti;
+  result.value = listStep.value[step]?.ti;
   console.log(listStep.value);
   return result.value
 }
