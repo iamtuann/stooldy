@@ -41,7 +41,16 @@ const routes = [
           layout: DefaultLayout,
           displayName: "Tìm phần tử nghịch đảo"
         },
-      }
+      },
+      {
+        path: "affine",
+        name: "Affine",
+        component: () => import("../views/atvbmtt/Affine.vue"),
+        meta: { 
+          layout: DefaultLayout,
+          displayName: "Mã hóa Affine"
+        },
+      },
     ]
   }
 ]

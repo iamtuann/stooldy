@@ -51,7 +51,7 @@ import { decToBin, decToBinArray } from "../../utils/calculate";
 const form = ref(null);
 const inputRules = [
   v => !!v || "Trường không được để trống",
-  v => /^\d+$/.test(v) || "Số không hợp lệ"
+  // v => /^\d+$/.test(v) || "Số không hợp lệ"
 ]
 
 const xModel = ref("");
